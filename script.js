@@ -35,10 +35,21 @@ const {createApp} = Vue;
         },
         methods: {
             next(){
-                this.activeIndex++;
+                if(this.activeIndex < this.slides.length -1){
+                    this.activeIndex ++
+                } else{
+                    this.activeIndex = 0
+                }
             },
             prev(){
-                this.activeIndex--;
+                if(this.activeIndex === 0){
+                    this.activeIndex = this.slides.length -1
+                } else{
+                    this.activeIndex--
+                }
+            },
+            selectThumbnail(index){
+                this.activeIndex = index;
             }
         }
 
