@@ -59,7 +59,7 @@ const {createApp} = Vue;
             }
         },
         methods: {
-
+            
         }
 
     }).mount('#app');
