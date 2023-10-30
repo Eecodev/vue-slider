@@ -33,9 +33,13 @@ const {createApp} = Vue;
                 activeIndex: 0
             }
         },
-        methods: {},
-        created(){
-            console.log('ciao');
+        methods: {
+            next(){
+                this.activeIndex++;
+            },
+            prev(){
+                this.activeIndex--;
+            }
         }
 
     }).mount('#app');
